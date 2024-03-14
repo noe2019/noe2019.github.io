@@ -1,69 +1,32 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-header {
-    position: relative;
-    background-image: url('images/pic02.jpg'); /* Update this path to your actual image location */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    height: 100vh; /* Full height of the viewport */
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for nav */
-}
-
-.nav-logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1em;
-    font-weight: bold;
-}
-
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-.hero p {
-    font-size: 1.2em;
-    line-height: 1.4;
-    max-width: 600px;
-    margin: 0 auto 1.5em;
-}
-
-button {
-    padding: 0.8em 1.5em;
-    background-color: #ffa500; /* Button color */
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #cc8400;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Data Science</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo"><a href="#">Qiusheng Wu</a></div>
+            <div class="nav-links">
+                <a href="#about">ABOUT</a>
+                <a href="#research">RESEARCH</a>
+                <a href="#publications">PUBLICATIONS</a>
+                <a href="#awards">AWARDS</a>
+                <a href="#teaching">TEACHING</a>
+                <a href="#services">SERVICES</a>
+                <a href="#students">STUDENTS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>University of Tennessee, Knoxville</h1>
+            <p>Geospatial Data Science</p>
+            <p>Geographic Information Science (GIS), Remote Sensing, Environmental Modeling, Big Geospatial Data Analytics, Wetland Mapping, Surface Water Hydrology, LiDAR, GIS Programming, Python, R, Google Earth Engine</p>
+            <button>TELL ME MORE</button>
+        </div>
+    </header>
+</body>
+</html>
