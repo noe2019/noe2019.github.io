@@ -56,7 +56,7 @@
             <div class="nav-logo"><a href="#"></a></div>
             <div class="nav-links">
                 <a href="#about">ABOUT</a>
-                <a href="#portfolio.html">PORTFOLIO</a>
+                <a href="#portfolio">PORTFOLIO</a> <!-- Updated link to reference an on-page ID -->
                 <a href="#publications">PUBLICATIONS</a>
                 <a href="#awards">AWARDS</a>
                 <a href="#teaching">TEACHING</a>
@@ -66,19 +66,26 @@
             </div>
         </nav>
     </header>
-    <section id="about" style="page-break-after: always;">
+    <section id="about">
         <div class="hero">
             <h1>Beam Data, Toronto, Canada</h1>
             <p>University of Sherbrooke</p>
             <p>Data Science, Python, MySQL, Machine learning, Statistics, Remote Sensing, Big Geospatial Data Analytics, Healthcare analytics, Agricultural and environmental economics, Finance, and Real Estate</p>
         </div>
     </section>
-    <section id="about" style="page-break-after: always;">
+    <section id="about">
         <div class="hero">
             <img src="images/avatar.jpg" alt="Noé Fouotsa" class="profile-pic">
             <p>Noé Carème Fouotsa Manfouo, PhD</p>
             <p>I am a passionate Data Science consultant at Beam Data in Toronto where I develop and deploy AI solutions for various industries. I am also a healthcare data analyst at the Centre Hospitalier Universitaire de Sherbrooke, where I develop machine learning solutions to improve the follow-up of diabetes complications. Dedicated to fostering career growth, I actively contribute to teaching and mentoring students in the applications of data science in Healthcare, and agricultural economics.</p>
-            <a href="#portfolio.html"></a><button>TELL ME MORE</button>
+            <button onclick="location.href='#portfolio';">TELL ME MORE</button> <!-- Link to the Portfolio section -->
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="hero">
+            <h2>Portfolio</h2>
+            <p>Explore my projects and professional work in data science and machine learning.</p>
+            <!-- Example project list or gallery here -->
         </div>
     </section>
 </body>
