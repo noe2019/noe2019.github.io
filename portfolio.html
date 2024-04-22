@@ -20,10 +20,8 @@
             width: 100%;
             background: #333; /* Dark background for the nav bar */
         }
-        .nav-logo, .nav-links {
-            display: flex;
-        }
         .nav-links {
+            display: flex;
             gap: 20px;
         }
         .nav-links a {
@@ -60,32 +58,35 @@
     <header>
         <nav>
             <div class="nav-links">
-                <a href="#index.html">HOME</a>
-                <a href="#portfolio.html">PORTFOLIO</a>
-                <a href="#publications">PUBLICATIONS</a>
-                <a href="#awards">AWARDS</a>
-                <a href="#teaching">TEACHING</a>
-                <a href="#services">SERVICES</a>
-                <a href="#students">STUDENTS</a>
-                <a href="#contact">CONTACT</a>
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="publications.html">PUBLICATIONS</a>
+                <a href="awards.html">AWARDS</a>
+                <a href="teaching.html">TEACHING</a>
+                <a href="services.html">SERVICES</a>
+                <a href="students.html">STUDENTS</a>
+                <a href="contact.html">CONTACT</a>
             </div>
         </nav>
     </header>
     <div class="content">
+        <h1>My Portfolio</h1>
+        <p>Here is a selection of my most notable projects in Data Science:</p>
         <div class="project">
             <h2 class="project-title">Geospatial Data Collection Project</h2>
             <p class="project-description">
-                The <strong>Geospatial Data Collection</strong> project includes extensive datasets critical for environmental and agricultural research in South Africa. This collection contains:
+                This project includes extensive datasets critical for environmental and agricultural research in South Africa. Key components include:
                 <ul>
                     <li>CHIRPS rainfall data collection at ward level.</li>
                     <li>High Resolution Settlement Layer data collection.</li>
                     <li>South African National land cover data collection.</li>
                     <li>Moderate-resolution Imaging Spectroradiometer (MODIS) data collection.</li>
-                    <li>Crop classification using Landsat8 and Sentinel2 satellite images for machine learning applications.</li>
+                    <li>Crop classification using Landsat8 and Sentinel2 satellite images.</li>
                 </ul>
             </p>
             <a href="https://github.com/noe2019/Geospatial_Data_Collection" class="project-link" target="_blank">View Project on GitHub</a>
         </div>
+        <!-- Add more projects as needed -->
     </div>
 </body>
 </html>
