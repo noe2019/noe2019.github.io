@@ -89,7 +89,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science</title>
+    <title>Noé Carème Fouotsa Manfouo - About Me</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body, html {
@@ -97,8 +97,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            background: url('images/pic02.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: none; /* No background image */
+            color: #333; /* Text color for readability */
         }
         nav {
             display: flex;
@@ -113,34 +113,19 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: white; /* Change as needed for visibility against the background */
+            color: #333; /* Dark text color for readability */
         }
-        .hero {
-            text-align: center;
-            margin-top: 20px;
-            color: white; /* Change as needed for visibility against the background */
-        }
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        .row {
+        .content {
             display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
         }
-        .column {
-            flex: 50%;
-            padding: 5px;
+        .content > div {
+            flex: 1;
+            margin-right: 20px;
         }
-        img {
-            border-radius: 50%;
-            width: 200px; /* Adjust width as necessary */
-        }
-        button {
-            background: none;
-            border: 1px solid white;
-            color: white;
-            padding: 10px 20px;
-            text-transform: uppercase;
-            cursor: pointer;
+        .content > div:last-child {
+            margin-right: 0;
         }
     </style>
 </head>
@@ -149,38 +134,26 @@
         <nav>
             <div class="nav-logo"><a href="#"></a></div>
             <div class="nav-links">
-                <a href="#about">ABOUT</a>
-                <a href="#portfolio">PORTFOLIO</a>
-                <a href="#publications">PUBLICATIONS</a>
-                <a href="#awards">AWARDS</a>
-                <a href="#teaching">TEACHING</a>
-                <a href="#services">SERVICES</a>
-                <a href="#students">STUDENTS</a>
-                <a href="#contact">CONTACT</a>
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="publications.html">Publications</a>
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
-    <section id="about" style="page-break-after: always;">
-        <div class="hero">
-            <h1>Beam Data, Toronto, Canada</h1>
-            <p>University of Sherbrooke, Canada</p>
-            <p>Data Science, Python, MySQL, Machine learning, Statistics, Remote Sensing, Big Geospatial Data Analytics, Healthcare analytics, Agricultural and environmental economics, Finance, and Real Estate</p>
+    <section class="container">
+        <div class="content">
+            <div>
+                <h2>About Me</h2>
+                <p>Accomplished operations research analyst and machine learning specialist with over 5 years of experience in environmental research, healthcare analytics, and agricultural productivity. Proven track record of leveraging data-driven insights to inform strategic decisions, resulting in significant cost savings and efficiency improvements for clients.</p>
+            </div>
+            <div>
+                <!-- Removed the image from this section -->
+            </div>
         </div>
     </section>
-    <section id="about">
-        <div class="hero">
-            <img src="images/avatar.jpg" alt="Noé Fouotsa" class="profile-pic">
-            <p>Noé Carème Fouotsa Manfouo, PhD</p>
-            <p>I am a passionate Data Science consultant at Beam Data in Toronto and a healthcare data analyst at the Centre Hospitalier Universitaire de Sherbrooke, Quebec. I develop and deploy AI solutions for various industries. Dedicated to fostering career growth, I actively contribute to teaching and mentoring students in the applications of data science in Healthcare, and agricultural economics.</p>
-            <a href="#portfolio"><button>TELL ME MORE</button></a>
-        </div>
-    </section>
-    <!-- Example Portfolio Section -->
-    <section id="portfolio">
-        <div class="hero">
-            <h1>Portfolio</h1>
-            <p>Details about projects and accomplishments.</p>
-        </div>
-    </section>
+    <footer>
+        <p>Copyright &copy; 2023 Noé Carème Fouotsa Manfouo</p>
+    </footer>
 </body>
 </html>
