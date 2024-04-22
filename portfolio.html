@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Data Science</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            color: black; /* Ensuring readability */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: #333; /* Dark background for the nav bar */
+        }
+        .nav-logo, .nav-links {
+            display: flex;
+        }
+        .nav-links {
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white; /* White text for visibility against dark background */
+        }
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .project {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%; /* Adjust as necessary */
+            border: 1px solid #ccc; /* subtle border */
+            border-radius: 5px; /* rounded corners */
+        }
+        .project-title {
+            font-size: 24px;
+            color: #333;
+        }
+        .project-description {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .project-link {
+            color: #06C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="#publications">PUBLICATIONS</a>
+                <a href="#awards">AWARDS</a>
+                <a href="#teaching">TEACHING</a>
+                <a href="#services">SERVICES</a>
+                <a href="#students">STUDENTS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="project">
+            <h2 class="project-title">Geospatial Data Collection Project</h2>
+            <p class="project-description">
+                The <strong>Geospatial Data Collection</strong> project includes extensive datasets critical for environmental and agricultural research in South Africa. This collection contains:
+                <ul>
+                    <li>CHIRPS rainfall data collection at ward level.</li>
+                    <li>High Resolution Settlement Layer data collection.</li>
+                    <li>South African National land cover data collection.</li>
+                    <li>Moderate-resolution Imaging Spectroradiometer (MODIS) data collection.</li>
+                    <li>Crop classification using Landsat8 and Sentinel2 satellite images for machine learning applications.</li>
+                </ul>
+            </p>
+            <a href="https://github.com/noe2019/Geospatial_Data_Collection" class="project-link" target="_blank">View Project on GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
