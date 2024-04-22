@@ -2,77 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Science</title>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                background: url('images/.jpg') no-repeat center center fixed;
-                background-size: cover;
-            }
-            nav {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-            }
-            .nav-logo, .nav-links {
-                display: flex;
-            }
-            .nav-links {
-                gap: 20px;
-            }
-            .nav-links a {
-                text-decoration: none;
-                color: white; /* Change as needed for visibility against the background */
-            }
-            .hero {
-                text-align: center;
-                margin-top: 20px;
-                color: white; /* Change as needed for visibility against the background */
-            }
-            *, *::before, *::after {
-                box-sizing: border-box;
-            }
-            .row {
-                display: flex;
-            }
-            .column {
-                flex: 50%;
-                padding: 5px;
-            }
-            img {
-                border-radius: 50%;
-                width: 200px; /* Adjust width as necessary */
-            }
-        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Data Science</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            color: black; /* Ensuring readability */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: #333; /* Dark background for the nav bar */
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white; /* White text for visibility against dark background */
+        }
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .publication {
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%; /* Adjust as necessary */
+            border: 1px solid #ccc; /* subtle border */
+            border-radius: 5px; /* rounded corners */
+        }
+        .publication-title {
+            font-size: 24px;
+            color: #333;
+        }
+        .publication-meta {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .publication-link {
+            color: #06C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-logo"><a href="#"></a></div>
             <div class="nav-links">
-                <a href="about.html">Home</a>
-                <a href="index.html">About</a>
-                <a href="resume.html">Resume</a>
-                <a href="publications.html">Publications</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="publications.html">PUBLICATIONS</a>
+                <a href="awards.html">AWARDS</a>
+                <a href="teaching.html">TEACHING</a>
+                <a href="services.html">SERVICES</a>
+                <a href="students.html">STUDENTS</a>
+                <a href="contact.html">CONTACT</a>
             </div>
         </nav>
     </header>
-
-    <section class="container">
-        <h2>Research Publications</h2>
-        <ul>
-            <!-- List publications -->
-        </ul>
-    </section>
-
-    <footer>
-        <p>Copyright &copy; 2023 Noé Carème Fouotsa Manfouo</p>
-    </footer>
+    <div class="content">
+        <h1>Selected Publications</h1>
+        <div class="publication">
+            <h2 class="publication-title">Race/Ethnicity and Other Predictors of Early‑Onset Type 2 Diabetes Mellitus in the US Population</h2>
+            <p class="publication-meta">Fouotsa Manfouo, Noé Carème; Ndjaboue, Ruth; Ngueta, Gerard - Racial and Ethnic Health Disparities, 2024</p>
+            <a href="https://link.springer.com/article/10.1007/s40615-024-01980-8" class="publication-link" target="_blank">View Article</a>
+        </div>
+        <div class="publication">
+            <h2 class="publication-title">Monitoring commercial and smallholder production inequalities during South Africa's lockdown using remotely sensed data</h2>
+            <p class="publication-meta">Fouotsa Manfouo, Noé Carème - Agrosystems, Geosciences & Environment, 2024</p>
+            <a href="https://doi.org/10.1002/agg2.20460" class="publication-link" target="_blank">View Article</a>
+        </div>
+        <div class="publication">
+            <h2 class="publication-title">A Comparison of the Statistical Downscaling and Long-Short-Term-Memory Artificial Neural Network Models for Long-Term Temperature and Precipitations Forecasting</h2>
+            <p class="publication-meta">Fouotsa Manfouo, Noé Carème; Potgieter, Linke; Watson, Andrew; Nel, Johanna H - Atmosphere, 2023</p>
+            <a href="https://doi.org/10.3390/atmos14040708" class="publication-link" target="_blank">View Article</a>
+        </div>
+        <div class="publication">
+            <h2 class="publication-title">Investigating the effects of drought and lockdowns on smallholder and commercial agricultural production in KwaZulu-Natal using remotely sensed data</h2>
+            <p class="publication-meta">Fouotsa Manfouo, Noé Carème; Von Fintel, Dieter - Heliyon, 2022</p>
+            <a href="https://doi.org/10.1016/j.heliyon.2022.e11637" class="publication-link" target="_blank">View Article</a>
+        </div>
+    </div>
 </body>
 </html>
