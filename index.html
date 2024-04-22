@@ -2,80 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Science</title>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                background: url('images/.jpg') no-repeat center center fixed;
-                background-size: cover;
-            }
-            nav {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-            }
-            .nav-logo, .nav-links {
-                display: flex;
-            }
-            .nav-links {
-                gap: 20px;
-            }
-            .nav-links a {
-                text-decoration: none;
-                color: white; /* Change as needed for visibility against the background */
-            }
-            .hero {
-                text-align: center;
-                margin-top: 20px;
-                color: white; /* Change as needed for visibility against the background */
-            }
-            *, *::before, *::after {
-                box-sizing: border-box;
-            }
-            .row {
-                display: flex;
-            }
-            .column {
-                flex: 50%;
-                padding: 5px;
-            }
-            img {
-                border-radius: 50%;
-                width: 200px; /* Adjust width as necessary */
-            }
-        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/pic02.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-logo, .nav-links {
+            display: flex;
+        }
+        .nav-links {
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white; /* Change as needed for visibility against the background */
+        }
+        .hero {
+            text-align: center;
+            margin-top: 20px;
+            color: white; /* Change as needed for visibility against the background */
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
+        img {
+            border-radius: 50%;
+            width: 200px; /* Adjust width as necessary */
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-logo"><a href="#"></a></div>
             <div class="nav-links">
-                <a href="about.html">Home</a>
-                <a href="index.html">About</a>
-                <a href="resume.html">Resume</a>
-                <a href="publications.html">Publications</a>
-                <a href="contact.html">Contact</a>
+                <a href="#about">ABOUT</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#publications">PUBLICATIONS</a>
+                <a href="#awards">AWARDS</a>
+                <a href="#teaching">TEACHING</a>
+                <a href="#services">SERVICES</a>
+                <a href="#students">STUDENTS</a>
+                <a href="#contact">CONTACT</a>
             </div>
         </nav>
     </header>
-    <section class="container">
-        <div class="content">
-            <div>
-                <h2>About Me</h2>
-                <p>Accomplished operations research analyst and machine learning specialist with over 5 years of experience in environmental research, healthcare analytics, and agricultural productivity. Proven track record of leveraging data-driven insights to inform strategic decisions, resulting in significant cost savings and efficiency improvements for clients.</p>
-            </div>
-            <div>
-                <!-- Removed the image from this section -->
+    <section id="about" style="page-break-after: always;">
+        <div class="hero">
+            <h1>University of Sherbrooke, Canada</h1>
+            <p>PORTFOLIO</p>
+            <p>Data Science, Python, MySQL, Machine learning, Statistics, Remote Sensing, Agricultural Economics, Big Geospatial Data Analytics, Sentinel2, Google Earth Engine</p>
+            <button>TELL ME MORE</button>
+        </div>
+    </section>
+    <section id="more-about">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <img src="images/avatar.jpg" alt="Noé Fouotsa" class="profile-pic">
+                    <h2>Noé C. Fouotsa M., PhD</h2>
+                </div>
+                <div class="column">
+                    <p>As a passionate Geospatial Data Scientist at the University of Tennessee, Knoxville, I specialize in Geographic Information Science (GIS), Remote Sensing, and Environmental Modeling. With a deep commitment to advancing the field, I focus on leveraging Big Geospatial Data Analytics to address critical environmental challenges. My expertise includes Wetland Mapping, Surface Water Hydrology, and the innovative use of LiDAR technology. Dedicated to fostering academic growth, I actively contribute to teaching and mentoring students in GIS Programming, Python, R, and Google Earth Engine technologies.</p>
+                </div>
             </div>
         </div>
     </section>
-    <footer>
-        <p>Copyright &copy; 2023 Noé Carème Fouotsa Manfouo</p>
-    </footer>
 </body>
 </html>
