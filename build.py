@@ -322,9 +322,35 @@ def build_teaching():
 
 
 def build_course():
-    rows = "".join(f'<tr><td class="n">{n}</td><td>{T(fr, en)}</td><td><a class="colab" href="{COLAB}{n:02d}_{slug}.ipynb" target="_blank" rel="noopener">Colab ↗</a></td></tr>'
+    G = {i: "●" for i in range(1, 16)}; G[13] = "○"
+    I = {i: "●" for i in range(1, 16)}; I.update({1: "○", 2: "○"})
+    C = {i: "●" for i in (1, 2, 3, 4, 5, 7, 9, 10, 14, 15)}; C.update({6: "○", 11: "○", 8: "—", 12: "—", 13: "—"})
+
+    def cell(v):
+        return f'<td class="trk"><span class="{ {"●": "dot full", "○": "dot demo", "—": "dot off"}[v] }">{v}</span></td>'
+    rows = "".join(f'<tr><td class="n">{n}</td><td>{T(fr, en)}</td><td><a class="colab" href="{COLAB}{n:02d}_{slug}.ipynb" target="_blank" rel="noopener">Colab ↗</a></td>{cell(G[n])}{cell(I[n])}{cell(C[n])}</tr>'
                    for n, slug, fr, en in SESSIONS)
-    rows += f'<tr><td class="n">15</td><td>{T("Présentations des projets et synthèse", "Project presentations and wrap-up")}</td><td>—</td></tr>'
+    rows += f'<tr><td class="n">15</td><td>{T("Présentations des projets et synthèse", "Project presentations and wrap-up")}</td><td>—</td>{cell("●")}{cell("●")}{cell("●")}</tr>'
+    tracks_ml = [
+        ("Géomatique / environnement", "Geomatics / environment", "45 h",
+         "UdeS Département de géomatique appliquée (bac et maîtrise) ; Bishop's Environmental Studies and Geography",
+         "UdeS Applied Geomatics (bachelor's, master's); Bishop's Environmental Studies and Geography",
+         "S1–S12, S14, S15", "S13",
+         "Earth Engine, validation des cartes, estimation des superficies", "Earth Engine, map validation, area estimation"),
+        ("Informatique", "Computer science", "45 h",
+         "UdeS Département d'informatique (maîtrise IA et science des données, bac) ; Bishop's Computer Science",
+         "UdeS Computer Science (AI and data science master's, bachelor's); Bishop's Computer Science",
+         "S3–S15", "S1, S2",
+         "Révision rapide de Python ; plus de temps pour l'apprentissage profond et un projet technique", "Fast Python review; more time for deep learning and a technical project"),
+        ("Cégep / FC", "College / CE", "30 h (→ 45 h)",
+         "Cégep de Sherbrooke, formation continue (AEC) ; UdeS formation continue",
+         "Cégep de Sherbrooke continuing education (AEC); UdeS continuing education",
+         "S1–S5, S7, S9, S10, S14, S15", "S6, S11",
+         "Sans examen ni apprentissage profond ; projet guidé", "No exam or deep learning; guided project"),
+    ]
+    tracks_html = "".join(f"""<div class="card"><span class="tag green">{d}</span><h3>{T(fr, en)}</h3><p class="meta">{T(pfr, pen)}</p>
+<p><b>{T("Séances complètes", "Full sessions")} :</b> {full}<br><b>{T("Démonstrations", "Demonstrations")} :</b> {demo}</p><p>{T(nfr, nen)}</p></div>"""
+                          for fr, en, d, pfr, pen, full, demo, nfr, nen in tracks_ml)
     outcomes_fr = ["Écrire des programmes Python structurés pour les données environnementales.",
                    "Expliquer la physique de la télédétection et calculer des indices spectraux (NDVI, NDWI, NDBI).",
                    "Manipuler des données vectorielles et matricielles avec les bons systèmes de coordonnées.",
@@ -363,12 +389,18 @@ def build_course():
 </div></section>
 
 <section class="soft"><div class="wrap">
-  <div class="section-head"><div class="eyebrow">{T("Calendrier", "Schedule")}</div><h2>{T("15 séances de 3 h", "15 sessions of 3 hours")}</h2>
-  <p>{T("Chaque séance : 1 h 30 d'exposé interactif + 1 h 30 de laboratoire. Chaque laboratoire s'ouvre dans Google Colab en un clic.", "Each session: 1.5 h interactive lecture + 1.5 h lab. Each lab opens in Google Colab in one click.")}</p></div>
-  <div class="table-wrap"><table><thead><tr><th>#</th><th>{T("Séance", "Session")}</th><th>{T("Laboratoire", "Lab")}</th></tr></thead><tbody>{rows}</tbody></table></div>
+  <div class="section-head"><div class="eyebrow">{T("Parcours de formation", "Training tracks")}</div><h2>{T("Un cours, trois cursus", "One course, three programs")}</h2>
+  <p>{T("Les séances associées à chaque cursus sont indiquées ci-dessous et dans le calendrier.", "The sessions associated with each program are listed below and in the schedule.")}</p></div>
+  <div class="cards">{tracks_html}</div>
 </div></section>
 
-<section><div class="wrap two">
+<section><div class="wrap">
+  <div class="section-head"><div class="eyebrow">{T("Calendrier", "Schedule")}</div><h2>{T("15 séances de 3 h et séances par cursus", "15 three-hour sessions, by program")}</h2>
+  <p>{T("Chaque séance : 1 h 30 d'exposé interactif + 1 h 30 de laboratoire. ● séance complète · ○ démonstration (laboratoire facultatif) · — hors parcours.", "Each session: 1.5 h interactive lecture + 1.5 h lab. ● full session · ○ demonstration (optional lab) · — not in track.")}</p></div>
+  <div class="table-wrap"><table><thead><tr><th>#</th><th>{T("Séance", "Session")}</th><th>{T("Laboratoire", "Lab")}</th><th>{T("Géomatique", "Geomatics")}</th><th>{T("Informatique", "CS")}</th><th>{T("Cégep / FC", "College / CE")}</th></tr></thead><tbody>{rows}</tbody></table></div>
+</div></section>
+
+<section class="soft"><div class="wrap two">
   <div><div class="section-head"><div class="eyebrow">{T("Évaluation", "Assessment")}</div><h2>{T("Évaluer pour faire apprendre", "Assessment for learning")}</h2>
   <p>{T("Le projet de session est évalué en quatre jalons pour que la rétroaction arrive avant la note finale. Une grille critériée (question, données, modélisation, validation, reproductibilité) est fournie dès la première semaine.",
         "The term project is assessed in four milestones so feedback comes before the final grade. A criterion-based rubric (question, data, modelling, validation, reproducibility) is shared in week one.")}</p></div></div>
@@ -376,7 +408,7 @@ def build_course():
   {"".join(f"<tr><td>{T(fr, en)}</td><td><b>{w}</b></td></tr>" for fr, en, w in assess)}</tbody></table></div>
 </div></section>
 
-<section class="soft"><div class="wrap">
+<section><div class="wrap">
   <div class="section-head"><div class="eyebrow">{T("Pourquoi ce cours", "Why this course")}</div><h2>{T("Ce que les étudiants en retirent", "What students take away")}</h2></div>
   <div class="cards">
     <div class="card"><h3>{T("Un portfolio concret", "A concrete portfolio")}</h3><p>{T("Un projet complet sur GitHub et une application web à montrer à un employeur.", "A complete GitHub project and a web app to show employers.")}</p></div>
