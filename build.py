@@ -425,8 +425,8 @@ def build_course():
          "Cours de 45 h « Apprentissage automatique pour l'observation de la Terre » : plan, 15 séances, laboratoires Colab, évaluation. 45-hour Machine Learning for Earth Observation course.", body)
 
 
-REPO_F = "https://github.com/noe2019/fraude-360"
-COLAB_F = "https://colab.research.google.com/github/noe2019/fraude-360/blob/main/cours/laboratoires/"
+REPO_F = "https://github.com/noe2019/fraude-360-cours"
+COLAB_F = "https://colab.research.google.com/github/noe2019/fraude-360-cours/blob/main/cours/laboratoires/"
 # (séance, notebook, thème FR, thème EN, Gestion, Informatique, Cégep/FC) — ● complète · ○ démonstration · — hors parcours
 SESSIONS_F = [
     (1, "contexte_simulation", "La fraude transactionnelle et ses coûts ; données simulées", "Transaction fraud and its costs; simulated data", "●", "●", "●"),
