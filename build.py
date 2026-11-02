@@ -582,45 +582,101 @@ def build_portfolio():
 
 
 def build_resume():
+    # (dates, poste FR, poste EN, organisation FR, organisation EN, [puces FR], [puces EN])
     jobs = [
-        ("2024 –", "Consultant en science des données", "Data science consultant", "BeamData (Toronto) et mandats indépendants", "BeamData (Toronto) and freelance",
-         "Modèles prédictifs, pipelines ETL, tableaux de bord Power BI, systèmes RAG en français.", "Predictive models, ETL pipelines, Power BI dashboards, French-language RAG systems."),
-        ("2023 – 2024", "Stagiaire postdoctoral", "Postdoctoral fellow", "Université de Sherbrooke, FMSS", "Université de Sherbrooke, Faculty of Medicine and Health Sciences",
-         "Prédicteurs du diabète précoce (NHANES) ; trajectoires de complications à partir des données du CHUS.", "Early-onset diabetes predictors (NHANES); complication trajectories from CHUS data."),
-        ("2020 – 2023", "Stagiaire postdoctoral", "Postdoctoral fellow", "Université de Stellenbosch, Faculté des sciences naturelles", "Stellenbosch University, Faculty of Natural Sciences",
-         "Cartographie des arbres envahissants (Sentinel-2), prévision de l'eau au bassin du lac Tchad, suivi agricole au KwaZulu-Natal.", "Invasive tree mapping (Sentinel-2), Lake Chad Basin water forecasting, agricultural monitoring in KwaZulu-Natal."),
+        ("2026 –", "Scientifique des données (contrat, temps partiel)", "Data Scientist (contract, part-time)",
+         "Hydro-Québec · Vision stratégique et partenariats", "Hydro-Québec · Strategic Vision and Partnerships",
+         ["Outil Python d'automatisation documentaire pour les RH (Outlook → tri des courriels → extraction) : de 15 min à moins de 15 s par document (60× plus rapide).",
+          "Tableau de bord d'aide à la décision en production : Power BI connecté au lac de données via Azure Databricks, fin de la consolidation manuelle.",
+          "Agents IA sur mesure (LLM, Copilot) pour l'automatisation des processus : plus de 3 h gagnées par semaine."],
+         ["Python document-automation tool for HR (Outlook → email triage → extraction): from 15 min to under 15 s per document (60× faster).",
+          "Decision-support dashboard in production: Power BI connected to the data lake through Azure Databricks, ending manual consolidation.",
+          "Custom AI agents (LLM, Copilot) for process automation: more than 3 hours saved per week."]),
+        ("2025 –", "Analyste-conseil (contrat, temps partiel)", "Advisory Analyst (contract, part-time)",
+         "Institut de la statistique du Québec · accès aux données de recherche", "Institut de la statistique du Québec · research data access",
+         ["Analyses de divulgation de résultats statistiques issus de données multisources (Python, Stata, SAS, SPSS) dans un cadre réglementaire strict.",
+          "Outils Python d'automatisation et prototypes de modèles de langage locaux (Ollama) pour la détection d'anomalies et l'analyse documentaire."],
+         ["Disclosure review of statistical outputs from multi-source data (Python, Stata, SAS, SPSS) under strict regulatory rules.",
+          "Python automation tools and local language-model prototypes (Ollama) for anomaly detection and document analysis."]),
+        ("2024 – 2025", "Consultant en science des données", "Data Science Consultant", "Beam Data, Toronto (à distance)", "Beam Data, Toronto (remote)",
+         ["Système complet de tarification dynamique (prévoir puis optimiser) pour une entreprise de location de véhicules : prévision de la demande (ARIMA, ML) et optimisation des prix sous contraintes.",
+          "Rapports exécutifs traduisant des résultats techniques pour des décideurs non spécialistes."],
+         ["End-to-end dynamic pricing system (predict-then-optimize) for a vehicle rental company: demand forecasting (ARIMA, ML) and constrained price optimization.",
+          "Executive reports translating technical findings for non-technical decision-makers."]),
+        ("2023 – 2024", "Stagiaire postdoctoral", "Postdoctoral Researcher", "Université de Sherbrooke, FMSS", "Université de Sherbrooke, Faculty of Medicine and Health Sciences",
+         ["Modèles de risque conditionnels des trajectoires de complications du diabète de type 2 ; prédicteurs du diabète précoce (NHANES).",
+          "Présentation aux JSDOCC 2024 ; vulgarisation de l'IA en santé ; demandes de financement."],
+         ["Conditional risk models of type 2 diabetes complication trajectories; early-onset diabetes predictors (NHANES).",
+          "Presentation at JSDOCC 2024; public outreach on AI in health; funding applications."]),
+        ("2020 – 2023", "Stagiaire postdoctoral", "Postdoctoral Researcher", "Université de Stellenbosch, Afrique du Sud", "Stellenbosch University, South Africa",
+         ["Télédétection et apprentissage automatique pour l'agriculture, le climat, les arbres envahissants et la sécurité alimentaire (Sentinel-2, Earth Engine, LSTM)."],
+         ["Remote sensing and machine learning for agriculture, climate, invasive trees and food security (Sentinel-2, Earth Engine, LSTM)."]),
+        ("2020 – 2021", "Consultant en science des données", "Data Science Consultant", "Ashanti AI, Johannesburg (à distance)", "Ashanti AI, Johannesburg (remote)",
+         ["Expertise Python et apprentissage automatique pour deux clients."], ["Python and machine-learning expertise for two clients."]),
         ("2018 – 2023", "Chargé d'enseignement", "Assistant Lecturer", "Université de Stellenbosch", "Stellenbosch University",
-         "Statistique et prévision (1er cycle), science des données (cycles supérieurs).", "Statistics and forecasting (undergraduate), data science (graduate)."),
-        ("2015 – 2016", "Chargé de cours", "Lecturer", "Institut Universitaire de la Côte, Douala", "Institut Universitaire de la Côte, Douala",
-         "Programmation linéaire, gestion des stocks, mathématiques financières ; coordination de programme.", "Linear programming, inventory control, financial mathematics; program coordination."),
+         ["Techniques de prévision (Box-Jenkins) en 3e année de recherche opérationnelle et logistique ; science des données aux cycles supérieurs."],
+         ["Forecasting (Box-Jenkins) for third-year Operations Research and Logistics students; graduate data science."]),
+        ("2019 – 2020", "Tuteur en statistique et en économétrie", "Statistics and Econometrics Tutor", "Teach Me 2, Le Cap", "Teach Me 2, Cape Town",
+         ["Accompagnement d'étudiants du 1er cycle et des cycles supérieurs (Afrique du Sud, Australie, Canada)."],
+         ["Support for undergraduate and graduate students (South Africa, Australia, Canada)."]),
+        ("2019", "Fellow en apprentissage automatique", "Machine Learning Fellow", "Fellowship.AI, Le Cap", "Fellowship.AI, Cape Town",
+         ["Applications d'apprentissage profond pour des entreprises, en méthode agile et programmation en binôme."],
+         ["Deep-learning applications for companies, using agile methods and pair programming."]),
+        ("2015 – 2016", "Chargé de cours et coordonnateur de programme", "Lecturer and Program Coordinator", "Institut Universitaire de la Côte, Douala", "Institut Universitaire de la Côte, Douala",
+         ["Mathématiques des affaires, statistique, mathématiques financières et recherche opérationnelle (1er cycle) ; coordination du programme HND."],
+         ["Business mathematics, statistics, financial mathematics and operations research (undergraduate); HND program coordination."]),
     ]
-    tl = "".join(f'<div class="tl"><div class="when">{w}</div><h3>{T(rfr, ren)}</h3><div class="where">{T(pfr, pen)}</div><p>{T(dfr, den)}</p></div>'
+    tl = "".join(f"""<div class="tl"><div class="when">{w}</div><h3>{T(rfr, ren)}</h3><div class="where">{T(pfr, pen)}</div>
+<ul class="fr">{"".join(f"<li>{x}</li>" for x in dfr)}</ul><ul class="en">{"".join(f"<li>{x}</li>" for x in den)}</ul></div>"""
                  for w, rfr, ren, pfr, pen, dfr, den in jobs)
-    edu = [("2020", "Ph. D. en recherche opérationnelle", "PhD in Operations Research", "Université de Stellenbosch, Afrique du Sud", "Stellenbosch University, South Africa"),
-           ("2015", "M. Sc. en sciences mathématiques", "MSc in Mathematical Sciences", "African Institute for Mathematical Sciences (AIMS), Cameroun", "African Institute for Mathematical Sciences (AIMS), Cameroon"),
-           ("2013", "M. Sc. en économie mathématique", "MSc in Mathematical Economics", "Université de Dschang, Cameroun", "University of Dschang, Cameroon")]
-    edu_html = "".join(f'<div class="tl"><div class="when">{y}</div><h3>{T(a, b)}</h3><div class="where">{T(c, d)}</div></div>' for y, a, b, c, d in edu)
+    edu = [("2016 – 2020", "Ph. D. en recherche opérationnelle", "PhD in Operations Research", "Université de Stellenbosch, Afrique du Sud", "Stellenbosch University, South Africa",
+            "Apprentissage automatique (LSTM, GRU, forêts aléatoires) pour estimer l'offre en eau et la demande agricole du bassin du lac Tchad.",
+            "Machine learning (LSTM, GRU, random forests) to estimate water supply and agricultural demand in the Lake Chad Basin."),
+           ("2014 – 2015", "M. Sc. en sciences mathématiques", "MSc in Mathematical Sciences", "African Institute for Mathematical Sciences (AIMS), Cameroun", "African Institute for Mathematical Sciences (AIMS), Cameroon",
+            "Mention bien (75–84 %).", "Good pass (75–84%)."),
+           ("2010 – 2013", "Master en économie mathématique", "Master's in Mathematical Economics", "Université de Dschang, Cameroun", "University of Dschang, Cameroon",
+            "2e de la promotion.", "Ranked 2nd in the cohort."),
+           ("", "B. Sc. en économie", "BSc in Economics", "Université de Dschang, Cameroun", "University of Dschang, Cameroon", "", "")]
+    edu_html = "".join(f'<div class="tl"><div class="when">{y}</div><h3>{T(a, b)}</h3><div class="where">{T(c, d)}</div>{f"<p>{T(e, f)}</p>" if e else ""}</div>'
+                       for y, a, b, c, d, e, f in edu)
+    certs = [("Hands-on Data Science and AI for Healthcare", "2024"), ("SQL (avancé) et Python — HackerRank", "2024"),
+             ("Leading Diverse Teams to Success — LinkedIn", "2024"), ("Google Data Analytics — Coursera", "2022"),
+             ("SQL + Python + Tableau — Udemy", "2022")]
     awards = [("Bourse de voyage, Réseau CMDO (2023–2024)", "Travel grant, CMDO network (2023–2024)"),
               ("Bourse départementale, Université de Stellenbosch (2019)", "Departmental scholarship, Stellenbosch University (2019)"),
               ("Subvention d'échange et de collaboration, NRF (2018)", "Knowledge Interchange and Collaboration grant, NRF (2018)"),
               ("Prix d'affiche, Deep Learning Indaba (2018)", "Poster award, Deep Learning Indaba (2018)"),
               ("Bourse de maîtrise, Next Einstein Initiative (2014–2015)", "Master's scholarship, Next Einstein Initiative (2014–2015)"),
               ("Prix d'excellence du Chef de l'État pour l'enseignement supérieur (2011–2013)", "Head of State Higher Education Excellence Award (2011–2013)")]
+    skills = ["Python (pandas, scikit-learn, PyTorch)", "SQL", "R", "Stata · SAS · SPSS", "Power BI", "Tableau", "Azure Databricks", "PySpark",
+              "MLflow", "FastAPI · Streamlit", T("LLM (Ollama, RAG, agents Copilot)", "LLMs (Ollama, RAG, Copilot agents)"), "Google Earth Engine", "QGIS", "Git · Docker", "LaTeX"]
     body = f"""
 <section class="page-hero"><div class="wrap"><h1>Curriculum vitae</h1>
-<p>{T("Version abrégée. CV complet et références disponibles sur demande.", "Short version. Full CV and references available on request.")}</p>
+<p>{T("Scientifique des données et consultant en IA, Ph. D. en recherche opérationnelle. Dix ans d'expérience entre recherche, industrie et enseignement universitaire, au Cameroun, en Afrique du Sud et au Québec.",
+      "Data scientist and AI consultant, PhD in Operations Research. Ten years of experience across research, industry and university teaching in Cameroon, South Africa and Québec.")}</p>
 <div class="btns" style="margin-top:20px"><a class="btn primary" href="mailto:{EMAIL}?subject=CV">{T("Demander le CV complet", "Request the full CV")}</a><a class="btn ghost" href="{LINKS['LinkedIn']}" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
-<section><div class="wrap two">
+<section><div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>60×</b><span>{T("traitement documentaire plus rapide (Hydro-Québec)", "faster document processing (Hydro-Québec)")}</span></div>
+    <div class="stat"><b>10</b><span>{T("ans en science des données et en enseignement", "years in data science and teaching")}</span></div>
+    <div class="stat"><b>16</b><span>{T("applications de ML déployées", "deployed ML applications")}</span></div>
+    <div class="stat"><b>2</b><span>{T("cours de 45 h prêts à offrir", "ready-to-offer 45-hour courses")}</span></div>
+  </div>
+</div></section>
+<section class="soft"><div class="wrap two">
   <div><h2>{T("Expérience", "Experience")}</h2><div class="timeline">{tl}</div></div>
   <div><h2>{T("Formation", "Education")}</h2><div class="timeline">{edu_html}</div>
-    <div class="card" style="margin-top:10px"><h3>{T("Prix et bourses", "Awards and scholarships")}</h3>
+    <div class="card" style="margin-top:10px"><h3>{T("Compétences", "Skills")}</h3>
+      <p>{"".join(f'<span class="tag">{x}</span>' for x in skills)}</p>
+      <p>{T("<b>Langues :</b> français (maîtrise complète), anglais (compétence professionnelle ; doctorat et enseignement en anglais).",
+            "<b>Languages:</b> French (full professional proficiency), English (professional working proficiency; PhD and teaching in English).")}</p></div>
+    <div class="card" style="margin-top:20px"><h3>{T("Certifications", "Certifications")}</h3>
+      <ul>{"".join(f"<li>{c} <span class='meta'>· {y}</span></li>" for c, y in certs)}</ul></div>
+    <div class="card" style="margin-top:20px"><h3>{T("Prix et bourses", "Awards and scholarships")}</h3>
       <ul class="fr">{"".join(f"<li>{a}</li>" for a, _ in awards)}</ul><ul class="en">{"".join(f"<li>{b}</li>" for _, b in awards)}</ul></div>
-    <div class="card" style="margin-top:20px"><h3>{T("Compétences", "Skills")}</h3>
-      <p><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">scikit-learn</span><span class="tag">PyTorch</span><span class="tag">Google Earth Engine</span><span class="tag">QGIS</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Git · Docker</span><span class="tag">LaTeX</span></p>
-      <p>{T("<b>Langues :</b> français (langue maternelle), anglais (IELTS C1).", "<b>Languages:</b> French (native), English (IELTS C1).")}</p></div>
   </div>
 </div></section>"""
-    page("resume.html", "CV", "Curriculum vitae de Noé Carème Fouotsa Manfouo, Ph. D. CV.", body)
+    page("resume.html", "CV", "Curriculum vitae de Noé Carème Fouotsa Manfouo, Ph. D. : Hydro-Québec, Institut de la statistique du Québec, Beam Data, recherche postdoctorale, enseignement. CV.", body)
 
 
 def build_contact():
