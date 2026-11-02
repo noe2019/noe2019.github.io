@@ -1,107 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr" data-lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Data Science</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            color: black; /* Ensuring readability */
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            background: #333; /* Dark background for the nav bar */
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: white; /* White text for visibility against dark background */
-        }
-        .content {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .project {
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%; /* Adjust as necessary */
-            border: 1px solid #ccc; /* subtle border */
-            border-radius: 5px; /* rounded corners */
-        }
-        .project-title {
-            font-size: 24px;
-            color: #333;
-        }
-        .project-description {
-            text-align: left;
-            margin-top: 10px;
-        }
-        .project-link {
-            color: #06C;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projets · Projects · Noé Carème Fouotsa Manfouo</title>
+<meta name="description" content="Applications d'apprentissage automatique déployées : télédétection, santé, outils. Deployed machine learning applications.">
+<meta property="og:title" content="Projets · Projects · Noé Carème Fouotsa Manfouo">
+<meta property="og:description" content="Applications d'apprentissage automatique déployées : télédétection, santé, outils. Deployed machine learning applications.">
+<meta property="og:image" content="https://noe2019.github.io/images/portrait.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/portrait-sm.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Noé Carème Fouotsa Manfouo", "jobTitle": "Lecturer in data science, statistics and remote sensing", "url": "https://noe2019.github.io", "email": "mailto:noecaremee@gmail.com", "alumniOf": ["Stellenbosch University", "African Institute for Mathematical Sciences"], "address": {"@type": "PostalAddress", "addressLocality": "Sherbrooke", "addressRegion": "QC", "addressCountry": "CA"}, "sameAs": ["https://www.linkedin.com/in/noefouotsa/", "https://github.com/noe2019", "https://scholar.google.com/citations?user=acKVfowAAAAJ", "https://noe2019.github.io/DA-Portfolio-Website/"]}</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="portfolio.html">PORTFOLIO</a>
-                <a href="publications.html">PUBLICATIONS</a>
-                <a href="awards.html">AWARDS</a>
-                <a href="teaching.html">TEACHING</a>
-                <a href="services.html">SERVICES</a>
-                <a href="students.html">STUDENTS</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
-        </nav>
-    </header>
-    <div class="content">
-        <h1>Welcome to my Portfolio</h1>
-        <p>Here is a selection of my most notable projects in Data Science:</p>
-        <div class="project">
-            <h2 class="project-title">Geospatial Data Collection</h2>
-            <p class="project-description">
-                This project explains the data collection process through the python api of google earth engine for agricultural economics studies. The data sources include:
-                <ul>
-                    <li>CHIRPS rainfall data collection at ward level.</li>
-                    <li>High Resolution Settlement Layer data collection.</li>
-                    <li>South African National land cover data collection.</li>
-                    <li>Moderate-resolution Imaging Spectroradiometer (MODIS) data collection.</li>
-                    <li>Crop classification using Landsat8 and Sentinel2 satellite images.</li>
-                </ul>
-            </p>
-            <a href="https://github.com/noe2019/Geospatial_Data_Collection" class="project-link" target="_blank">View Project on GitHub</a>
-        </div>
-        <div class="project">
-            <h2 class="project-title">Absenteeism Prediction</h2>
-            <p class="project-description">
-                This project aims to identify the keys determining factors of absenteism in a company. In this project we develop and deploy a machine learning model that predicts absenteeism. The model helps in identifying the key factors contributing to employee absenteeism and assists HR in making informed decisions.
-            </p>
-            <a href="https://github.com/noe2019/Absenteeism_prediction" class="project-link" target="_blank">View Project on GitHub</a>
-        </div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Noé C. Fouotsa Manfouo<small>Ph. D. · <span class="fr">Science des données</span><span class="en">Data science</span></small></a>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav"><a href="index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="teaching.html"><span class="fr">Enseignement</span><span class="en">Teaching</span></a><a href="cours-ml4eo.html"><span class="fr">Cours ML4EO</span><span class="en">ML4EO course</span></a><a href="publications.html"><span class="fr">Recherche</span><span class="en">Research</span></a><a href="portfolio.html" class=active><span class="fr">Projets</span><span class="en">Projects</span></a><a href="resume.html"><span class="fr">CV</span><span class="en">CV</span></a><a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a><button class="lang" id="lang" aria-label="Langue / Language">EN</button></nav>
+</div></header>
+<main>
 
-        <div class="project">
-            <h2 class="project-title">Lake Chade storage forecasting</h2>
-            <p class="project-description">
-                In this project we develops and deploy a LSTM for storage forecasting in the Lake Chad Basin. This project is part of a bigger project on optimal water resources management in the Lake Chad Basin.
-            </p>
-            <a href="https://github.com/noe2019/Lake_storage_prediction" class="project-link" target="_blank">View Project on GitHub</a>
-        </div>
-
-    </div>
+<section class="page-hero"><div class="wrap"><h1><span class="fr">Projets et applications</span><span class="en">Projects and applications</span></h1>
+<p><span class="fr">Des modèles déployés en applications web, utilisés aussi comme exemples en classe. Données simulées lorsque les données originales sont confidentielles.</span><span class="en">Models deployed as web apps, also used as classroom examples. Simulated data where the original data are confidential.</span></p></div></section>
+<section><div class="wrap">
+  <div class="cards"><div class="card"><span class="tag green">Télédétection</span><h3>Reservoir Water Storage Forecasting</h3><p><span class="fr">Prévision du stockage d'eau des réservoirs (séries temporelles, ML).</span><span class="en">Reservoir storage forecasting (time series, ML).</span></p><a href="https://noe-water-storage-34fdf1488682.herokuapp.com/" target="_blank" rel="noopener"><span class="fr">Ouvrir l'application ↗</span><span class="en">Open the app ↗</span></a></div><div class="card"><span class="tag green">Télédétection</span><h3>Invasive Alien Tree Mapping</h3><p><span class="fr">Classification Sentinel-2 des arbres envahissants (Overberg).</span><span class="en">Sentinel-2 classification of invasive trees (Overberg).</span></p><a href="https://noe-invasive-species-814a7fc4c770.herokuapp.com/" target="_blank" rel="noopener"><span class="fr">Ouvrir l'application ↗</span><span class="en">Open the app ↗</span></a></div><div class="card"><span class="tag green">Télédétection</span><h3>Food Security Monitoring</h3><p><span class="fr">Effets de la sécheresse et des confinements sur l'agriculture (NDVI).</span><span class="en">Drought and lockdown effects on farming (NDVI).</span></p><a href="https://noe-food-security-c984fe0b9737.herokuapp.com/" target="_blank" rel="noopener"><span class="fr">Ouvrir l'application ↗</span><span class="en">Open the app ↗</span></a></div><div class="card"><span class="tag green">Santé</span><h3>T2DM Complication Trajectories</h3><p><span class="fr">Analyse de graphes des complications du diabète de type 2.</span><span class="en">Graph analysis of type 2 diabetes complications.</span></p><a href="https://noe-t2dm-trajectories-094c80ceabf2.herokuapp.com/" target="_blank" rel="noopener"><span class="fr">Ouvrir l'application ↗</span><span class="en">Open the app ↗</span></a></div><div class="card"><span class="tag green">Santé</span><h3>Multiple Disease Prediction</h3><p><span class="fr">Risque de diabète, maladies cardiaques et Parkinson.</span><span class="en">Diabetes, heart disease and Parkinson's risk.</span></p><a href="https://noe-multi-disease-5ba608b87c4d.herokuapp.com/" target="_blank" rel="noopener"><span class="fr">Ouvrir l'application ↗</span><span class="en">Open the app ↗</span></a></div><div class="card"><span class="tag green">Outils</span><h3>AutoML Task Generalizer</h3><p><span class="fr">Profilage, sélection de modèle et export automatiques.</span><span class="en">Automatic profiling, model selection and export.</span></p><a href="https://noe-automl-55f69a9f06c9.herokuapp.com/" target="_blank" rel="noopener"><span class="fr">Ouvrir l'application ↗</span><span class="en">Open the app ↗</span></a></div></div>
+  <p style="margin-top:24px"><span class="fr">Les applications s'éveillent en 10 à 20 secondes au premier accès.</span><span class="en">Apps wake up in 10–20 seconds on first visit.</span></p>
+  <div class="btns"><a class="btn outline" href="https://noe2019.github.io/DA-Portfolio-Website/" target="_blank" rel="noopener"><span class="fr">Les 16 projets du portfolio</span><span class="en">All 16 portfolio projects</span></a><a class="btn outline" href="https://github.com/noe2019" target="_blank" rel="noopener">GitHub</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div>© 2026 Noé Carème Fouotsa Manfouo · Sherbrooke (Québec)</div>
+  <div class="icons"><a href="mailto:noecaremee@gmail.com">noecaremee@gmail.com</a><a href="https://www.linkedin.com/in/noefouotsa/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/noe2019" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=acKVfowAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://noe2019.github.io/DA-Portfolio-Website/" target="_blank" rel="noopener">Portfolio</a></div>
+</div></footer>
 </body>
 </html>

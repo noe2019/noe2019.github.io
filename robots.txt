@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://noe2019.github.io/sitemap.xml

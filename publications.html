@@ -1,97 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr" data-lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Data Science</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            color: black; /* Ensuring readability */
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            background: #333; /* Dark background for the nav bar */
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: white; /* White text for visibility against dark background */
-        }
-        .content {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .publication {
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%; /* Adjust as necessary */
-            border: 1px solid #ccc; /* subtle border */
-            border-radius: 5px; /* rounded corners */
-        }
-        .publication-title {
-            font-size: 24px;
-            color: #333;
-        }
-        .publication-meta {
-            font-size: 16px;
-            color: #666;
-            margin-top: 5px;
-        }
-        .publication-link {
-            color: #06C;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recherche · Research · Noé Carème Fouotsa Manfouo</title>
+<meta name="description" content="Publications de Noé Carème Fouotsa Manfouo en télédétection, climat et santé. Research publications.">
+<meta property="og:title" content="Recherche · Research · Noé Carème Fouotsa Manfouo">
+<meta property="og:description" content="Publications de Noé Carème Fouotsa Manfouo en télédétection, climat et santé. Research publications.">
+<meta property="og:image" content="https://noe2019.github.io/images/portrait.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/portrait-sm.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Noé Carème Fouotsa Manfouo", "jobTitle": "Lecturer in data science, statistics and remote sensing", "url": "https://noe2019.github.io", "email": "mailto:noecaremee@gmail.com", "alumniOf": ["Stellenbosch University", "African Institute for Mathematical Sciences"], "address": {"@type": "PostalAddress", "addressLocality": "Sherbrooke", "addressRegion": "QC", "addressCountry": "CA"}, "sameAs": ["https://www.linkedin.com/in/noefouotsa/", "https://github.com/noe2019", "https://scholar.google.com/citations?user=acKVfowAAAAJ", "https://noe2019.github.io/DA-Portfolio-Website/"]}</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="portfolio.html">PORTFOLIO</a>
-                <a href="publications.html">PUBLICATIONS</a>
-                <a href="awards.html">AWARDS</a>
-                <a href="teaching.html">TEACHING</a>
-                <a href="services.html">SERVICES</a>
-                <a href="students.html">STUDENTS</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
-        </nav>
-    </header>
-    <div class="content">
-        <h1>Selected Publications</h1>
-        <div class="publication">
-            <h2 class="publication-title">Race/Ethnicity and Other Predictors of Early‑Onset Type 2 Diabetes Mellitus in the US Population</h2>
-            <p class="publication-meta">Fouotsa Manfouo, Noé Carème; Ndjaboue, Ruth; Ngueta, Gerard - Racial and Ethnic Health Disparities, 2024</p>
-            <a href="https://link.springer.com/article/10.1007/s40615-024-01980-8" class="publication-link" target="_blank">View Article</a>
-        </div>
-        <div class="publication">
-            <h2 class="publication-title">Monitoring commercial and smallholder production inequalities during South Africa's lockdown using remotely sensed data</h2>
-            <p class="publication-meta">Fouotsa Manfouo, Noé Carème - Agrosystems, Geosciences & Environment, 2024</p>
-            <a href="https://doi.org/10.1002/agg2.20460" class="publication-link" target="_blank">View Article</a>
-        </div>
-        <div class="publication">
-            <h2 class="publication-title">A Comparison of the Statistical Downscaling and Long-Short-Term-Memory Artificial Neural Network Models for Long-Term Temperature and Precipitations Forecasting</h2>
-            <p class="publication-meta">Fouotsa Manfouo, Noé Carème; Potgieter, Linke; Watson, Andrew; Nel, Johanna H - Atmosphere, 2023</p>
-            <a href="https://doi.org/10.3390/atmos14040708" class="publication-link" target="_blank">View Article</a>
-        </div>
-        <div class="publication">
-            <h2 class="publication-title">Investigating the effects of drought and lockdowns on smallholder and commercial agricultural production in KwaZulu-Natal using remotely sensed data</h2>
-            <p class="publication-meta">Fouotsa Manfouo, Noé Carème; Von Fintel, Dieter - Heliyon, 2022</p>
-            <a href="https://doi.org/10.1016/j.heliyon.2022.e11637" class="publication-link" target="_blank">View Article</a>
-        </div>
-    </div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Noé C. Fouotsa Manfouo<small>Ph. D. · <span class="fr">Science des données</span><span class="en">Data science</span></small></a>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav"><a href="index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="teaching.html"><span class="fr">Enseignement</span><span class="en">Teaching</span></a><a href="cours-ml4eo.html"><span class="fr">Cours ML4EO</span><span class="en">ML4EO course</span></a><a href="publications.html" class=active><span class="fr">Recherche</span><span class="en">Research</span></a><a href="portfolio.html"><span class="fr">Projets</span><span class="en">Projects</span></a><a href="resume.html"><span class="fr">CV</span><span class="en">CV</span></a><a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a><button class="lang" id="lang" aria-label="Langue / Language">EN</button></nav>
+</div></header>
+<main>
+
+<section class="page-hero"><div class="wrap"><h1><span class="fr">Recherche et publications</span><span class="en">Research and publications</span></h1>
+<p><span class="fr">Statistique, apprentissage automatique et télédétection appliqués à la sécurité alimentaire, à l'eau, à l'environnement et à la santé.</span><span class="en">Statistics, machine learning and remote sensing applied to food security, water, the environment and health.</span></p></div></section>
+<section><div class="wrap two">
+  <div class="card"><div class="pub"><span class="tag">Santé · Health</span><div class="title">Race/Ethnicity and Other Predictors of Early-Onset Type 2 Diabetes Mellitus in the US Population</div><div class="venue">Fouotsa Manfouo, N. C., Ndjaboue, R., Ngueta, G. — <i>Journal of Racial and Ethnic Health Disparities, 2024</i></div>
+<div class="links"><a href="https://www.researchgate.net/publication/379147208_Journal_of_Racial_and_Ethnic_Health_Disparities" target="_blank" rel="noopener">Article ↗</a></div></div><div class="pub"><span class="tag">Télédétection · Remote sensing</span><div class="title">Monitoring commercial and smallholder production inequalities during South Africa's lockdown using remotely sensed data</div><div class="venue">Fouotsa Manfouo, N. C. — <i>Agrosystems, Geosciences & Environment, 7(1), 2024</i></div>
+<div class="links"><a href="https://acsess.onlinelibrary.wiley.com/doi/epdf/10.1002/agg2.20460" target="_blank" rel="noopener">Article ↗</a></div></div><div class="pub"><span class="tag">Climat · Climate</span><div class="title">A Comparison of the Statistical Downscaling and Long-Short-Term-Memory Artificial Neural Network Models for Long-Term Temperature and Precipitations Forecasting</div><div class="venue">Fouotsa Manfouo, N. C., Potgieter, L., Watson, A., Nel, J. H. — <i>Atmosphere, 14(4), 708, 2023</i></div>
+<div class="links"><a href="https://www.mdpi.com/2073-4433/14/4/708" target="_blank" rel="noopener">Article ↗</a></div></div><div class="pub"><span class="tag">Télédétection · Remote sensing</span><div class="title">Investigating the effects of drought and lockdowns on smallholder and commercial agricultural production in KwaZulu-Natal using remotely sensed data</div><div class="venue">Fouotsa Manfouo, N. C., Von Fintel, D. — <i>Heliyon, 8(11), 2022</i></div>
+<div class="links"><a href="https://www.researchgate.net/publication/365322669_Investigating_the_effects_of_drought_and_lockdowns_on_smallholder_and_commercial_farming_agricultural_production_in_KwaZulu-Natal_using_remotely_sensed_data_Investigating_the_effects_of_drought_and_lo" target="_blank" rel="noopener">Article ↗</a></div></div><div class="pub"><span class="tag">Santé · Health</span><div class="title">Temporal trajectories of type 2 diabetes complications from inpatient data collected from 2006 to 2021 at the CHUS</div><div class="venue">Fouotsa Manfouo, N. C., Ndjaboue, R., Ngueta, G. — <i>Affiche · Poster, 2024</i></div>
+<div class="links"><a href="docs/poster-t2dm-trajectories-2024.pdf" target="_blank" rel="noopener">PDF ↗</a><a href="https://noe-t2dm-trajectories-094c80ceabf2.herokuapp.com/" target="_blank" rel="noopener">Démo · Demo ↗</a></div></div><div class="pub"><span class="tag">Télédétection · Remote sensing</span><div class="title">Application of classification models on Sentinel-2 images and tree stands shapefiles for invasive alien trees mapping in the Overberg region, South Africa</div><div class="venue">Fouotsa Manfouo, N. C., et al. — <i>Manuscrit · Manuscript</i></div>
+<div class="links"><a href="https://drive.google.com/file/d/1pqSl5teMe3puq1RqqU6gwzns7rLO9H9f/view?usp=drive_link" target="_blank" rel="noopener">PDF ↗</a><a href="https://noe-invasive-species-814a7fc4c770.herokuapp.com/" target="_blank" rel="noopener">Démo · Demo ↗</a></div></div><div class="pub"><span class="tag">Climat · Climate</span><div class="title">Comparison of time series methods for Lake Chad Basin storage forecasting</div><div class="venue">Fouotsa Manfouo, N. C., et al. — <i>Manuscrit · Manuscript</i></div>
+<div class="links"><a href="https://drive.google.com/file/d/1IUm6gZS1sqg7qPlrQwD0KnH2vtpy5e_-/view?usp=sharing" target="_blank" rel="noopener">PDF ↗</a><a href="https://noe-water-storage-34fdf1488682.herokuapp.com/" target="_blank" rel="noopener">Démo · Demo ↗</a></div></div></div>
+  <div>
+    <div class="card"><h3><span class="fr">Axes de recherche</span><span class="en">Research themes</span></h3>
+      <ul class="fr"><li>Suivi de l'agriculture et de la sécheresse par satellite</li><li>Cartographie des espèces envahissantes (Sentinel-2)</li><li>Prévision des ressources en eau (bassin du lac Tchad)</li><li>Trajectoires et prédicteurs du diabète de type 2</li></ul>
+      <ul class="en"><li>Satellite monitoring of agriculture and drought</li><li>Invasive species mapping (Sentinel-2)</li><li>Water resource forecasting (Lake Chad Basin)</li><li>Type 2 diabetes trajectories and predictors</li></ul></div>
+    <div class="card" style="margin-top:20px"><h3><span class="fr">Postes de recherche</span><span class="en">Research positions</span></h3>
+      <p><span class="fr">Stagiaire postdoctoral, Faculté de médecine et des sciences de la santé, Université de Sherbrooke (2023–2024) ; stagiaire postdoctoral, Faculté des sciences naturelles, Université de Stellenbosch (2020–2023).</span><span class="en">Postdoctoral fellow, Faculty of Medicine and Health Sciences, Université de Sherbrooke (2023–2024); postdoctoral fellow, Faculty of Natural Sciences, Stellenbosch University (2020–2023).</span></p>
+      <a href="https://scholar.google.com/citations?user=acKVfowAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div>© 2026 Noé Carème Fouotsa Manfouo · Sherbrooke (Québec)</div>
+  <div class="icons"><a href="mailto:noecaremee@gmail.com">noecaremee@gmail.com</a><a href="https://www.linkedin.com/in/noefouotsa/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/noe2019" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=acKVfowAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://noe2019.github.io/DA-Portfolio-Website/" target="_blank" rel="noopener">Portfolio</a></div>
+</div></footer>
 </body>
 </html>

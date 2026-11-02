@@ -1,86 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr" data-lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: url('images/pic02.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        .nav-logo, .nav-links {
-            display: flex;
-        }
-        .nav-links {
-            gap: 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: white; /* Change as needed for visibility against the background */
-        }
-        .hero {
-            text-align: center;
-            margin-top: 20px;
-            color: white; /* Change as needed for visibility against the background */
-        }
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        .row {
-            display: flex;
-        }
-        .column {
-            flex: 50%;
-            padding: 5px;
-        }
-        img {
-            border-radius: 50%;
-            width: 200px; /* Adjust width as necessary */
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil · Home · Noé Carème Fouotsa Manfouo</title>
+<meta name="description" content="Chargé de cours en science des données, statistique, apprentissage automatique et télédétection (Sherbrooke). Lecturer in data science and remote sensing.">
+<meta property="og:title" content="Accueil · Home · Noé Carème Fouotsa Manfouo">
+<meta property="og:description" content="Chargé de cours en science des données, statistique, apprentissage automatique et télédétection (Sherbrooke). Lecturer in data science and remote sensing.">
+<meta property="og:image" content="https://noe2019.github.io/images/portrait.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/portrait-sm.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Noé Carème Fouotsa Manfouo", "jobTitle": "Lecturer in data science, statistics and remote sensing", "url": "https://noe2019.github.io", "email": "mailto:noecaremee@gmail.com", "alumniOf": ["Stellenbosch University", "African Institute for Mathematical Sciences"], "address": {"@type": "PostalAddress", "addressLocality": "Sherbrooke", "addressRegion": "QC", "addressCountry": "CA"}, "sameAs": ["https://www.linkedin.com/in/noefouotsa/", "https://github.com/noe2019", "https://scholar.google.com/citations?user=acKVfowAAAAJ", "https://noe2019.github.io/DA-Portfolio-Website/"]}</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-logo"><a href="#"></a></div>
-            <div class="nav-links">
-                <a href="index.html">ABOUT</a>
-                <a href="portfolio.html">PORTFOLIO</a> <!-- Updated link to reference an on-page ID -->
-                <a href="publications.html">PUBLICATIONS</a>
-                <a href="awards.html">AWARDS</a>
-                <a href="teaching.html">TEACHING</a>
-                <a href="services.html">SERVICES</a>
-                <a href="students.html">STUDENTS</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
-        </nav>
-    </header>
-    <section id="about">
-        <div class="hero">
-            <h1>Beam Data, Toronto, Canada</h1>
-            <p></p>
-            <p>Data Science, Python, MySQL, Machine learning, Statistics, Remote Sensing, Big Geospatial Data Analytics, Healthcare analytics, Agricultural and environmental economics, Finance, and Real Estate</p>
-        </div>
-    </section>
-    <section id="about">
-        <div class="hero">
-            <img src="images/avatar.jpg" alt="Noé Fouotsa" class="profile-pic">
-            <p>Noé Carème Fouotsa Manfouo, PhD</p>
-            <button onclick="location.href='https://docs.google.com/document/d/1d7oiPHwaeCGNi1j2qiMza-FebBLyYKiq0i-RlrwJySk/edit?usp=sharing';">Curriculum Vitae</button>
-            <p>I am Data Scientist, currently working as a consultant at Beam Data in Toronto where I develop and deploy AI solutions including machine and LLMs for various industries.</p>
-            <button onclick="location.href='portfolio.html';">TELL ME MORE</button> <!-- Link to the Portfolio section -->
-        </div>
-    </section>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Noé C. Fouotsa Manfouo<small>Ph. D. · <span class="fr">Science des données</span><span class="en">Data science</span></small></a>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav"><a href="index.html" class=active><span class="fr">Accueil</span><span class="en">Home</span></a><a href="teaching.html"><span class="fr">Enseignement</span><span class="en">Teaching</span></a><a href="cours-ml4eo.html"><span class="fr">Cours ML4EO</span><span class="en">ML4EO course</span></a><a href="publications.html"><span class="fr">Recherche</span><span class="en">Research</span></a><a href="portfolio.html"><span class="fr">Projets</span><span class="en">Projects</span></a><a href="resume.html"><span class="fr">CV</span><span class="en">CV</span></a><a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a><button class="lang" id="lang" aria-label="Langue / Language">EN</button></nav>
+</div></header>
+<main>
+
+<section class="hero"><div class="wrap grid">
+  <div>
+    <div class="kicker"><span class="fr">Chargé de cours · Science des données · Télédétection</span><span class="en">Lecturer · Data science · Remote sensing</span></div>
+    <h1>Noé Carème Fouotsa Manfouo, Ph. D.</h1>
+    <p class="lead"><span class="fr">J'enseigne la statistique, l'apprentissage automatique et l'analyse d'images satellites avec une approche concrète : chaque notion est mise en pratique sur des données réelles, dans des notebooks prêts à l'emploi.</span><span class="en">I teach statistics, machine learning and satellite-image analysis with a hands-on approach: every concept is practised on real data, in ready-to-use notebooks.</span></p>
+    <div class="chips"><span class="chip"><span class="fr">Enseignement universitaire depuis 2015</span><span class="en">University teaching since 2015</span></span><span class="chip"><span class="fr">Ph. D. recherche opérationnelle (Stellenbosch)</span><span class="en">PhD Operations Research (Stellenbosch)</span></span><span class="chip"><span class="fr">Bilingue français · anglais</span><span class="en">Bilingual French · English</span></span><span class="chip">Sherbrooke (QC)</span></div>
+    <div class="btns">
+      <a class="btn primary" href="cours-ml4eo.html"><span class="fr">Découvrir mon cours de 45 h</span><span class="en">See my 45-hour course</span></a>
+      <a class="btn light" href="teaching.html"><span class="fr">Dossier d'enseignement</span><span class="en">Teaching portfolio</span></a>
+      <a class="btn ghost" href="resume.html">CV</a>
+    </div>
+  </div>
+  <img class="portrait" src="images/portrait.jpg" alt="Noé Carème Fouotsa Manfouo">
+</div></section>
+
+<section><div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>2015</b><span><span class="fr">première charge de cours universitaire</span><span class="en">first university course taught</span></span></div>
+    <div class="stat"><b>3</b><span><span class="fr">pays : Cameroun, Afrique du Sud, Canada</span><span class="en">countries: Cameroon, South Africa, Canada</span></span></div>
+    <div class="stat"><b>14</b><span><span class="fr">notebooks de cours ouverts et testés</span><span class="en">open, tested course notebooks</span></span></div>
+    <div class="stat"><b>16</b><span><span class="fr">applications de ML déployées</span><span class="en">deployed ML applications</span></span></div>
+  </div>
+</div></section>
+
+<section class="soft"><div class="wrap">
+  <div class="section-head"><div class="eyebrow"><span class="fr">Cours vedette</span><span class="en">Featured course</span></div>
+  <h2><span class="fr">Apprentissage automatique pour l'observation de la Terre</span><span class="en">Machine Learning for Earth Observation</span></h2>
+  <p><span class="fr">Un cours complet de 3 crédits (15 séances de 3 h), prêt à être offert : plan de cours, 14 laboratoires Colab avec rétroaction automatique, évaluations et grille de correction.</span><span class="en">A complete 3-credit course (15 × 3-hour sessions), ready to offer: course outline, 14 Colab labs with automatic feedback, assessments and rubric.</span></p></div>
+  <div class="feature">
+    <div>
+      <ul class="list-check">
+        <li><span class="fr">De la première ligne de Python aux cartes d'occupation du sol validées</span><span class="en">From the first line of Python to validated land-cover maps</span></li>
+        <li><span class="fr">Google Earth Engine, scikit-learn, PyTorch, données ouvertes (Sentinel-2, CHIRPS, WorldCover)</span><span class="en">Google Earth Engine, scikit-learn, PyTorch, open data (Sentinel-2, CHIRPS, WorldCover)</span></li>
+        <li><span class="fr">Bonnes pratiques de validation (Olofsson et al., 2014) et validation croisée spatiale</span><span class="en">Validation good practice (Olofsson et al., 2014) and spatial cross-validation</span></li>
+        <li><span class="fr">Projet de session reproductible publié sur GitHub et diffusé en application web</span><span class="en">Reproducible term project published on GitHub and shared as a web app</span></li>
+      </ul>
+      <div class="btns" style="margin-top:18px"><a class="btn outline" href="cours-ml4eo.html"><span class="fr">Voir le plan et le calendrier</span><span class="en">See outline and schedule</span></a><a class="btn outline" href="https://github.com/noe2019/ML4EO_Bootcamp" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+    <div class="blocks">
+      <div class="block b1"><b>S1–S3</b><span><span class="fr">Python et analyse de données</span><span class="en">Python and data analysis</span></span></div>
+      <div class="block b2"><b>S4–S8</b><span><span class="fr">Données géospatiales et Earth Engine</span><span class="en">Geospatial data and Earth Engine</span></span></div>
+      <div class="block b3"><b>S9–S13</b><span><span class="fr">Apprentissage automatique et profond</span><span class="en">Machine and deep learning</span></span></div>
+      <div class="block b4"><b>S14–S15</b><span><span class="fr">Reproductibilité, éthique, projets</span><span class="en">Reproducibility, ethics, projects</span></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="section-head"><div class="eyebrow"><span class="fr">Domaines d'enseignement</span><span class="en">Teaching areas</span></div>
+  <h2><span class="fr">Cours que je peux donner</span><span class="en">Courses I can teach</span></h2>
+  <p><span class="fr">En français ou en anglais, au cégep, au 1er cycle ou aux cycles supérieurs. Les étiquettes indiquent les unités où ces cours sont habituellement offerts.</span><span class="en">In French or English, at college, undergraduate or graduate level. Tags show the units where these courses are usually offered.</span></p></div>
+  <div class="cards"><div class="card"><h3><span class="fr">Programmation et science des données</span><span class="en">Programming and data science</span></h3><p><span class="fr">Python, pandas, visualisation, bases de données SQL, introduction à la science des données</span><span class="en">Python, pandas, visualization, SQL databases, introduction to data science</span></p><span class=tag>Informatique</span><span class=tag>Cégep TI</span><span class=tag>Bishop's CS</span></div><div class="card"><h3><span class="fr">Statistique et probabilités</span><span class="en">Statistics and probability</span></h3><p><span class="fr">Statistique descriptive et inférentielle, régression, séries chronologiques et prévision</span><span class="en">Descriptive and inferential statistics, regression, time series and forecasting</span></p><span class=tag>Mathématiques</span><span class=tag>Cégep</span><span class=tag>SIMQG</span></div><div class="card"><h3><span class="fr">Apprentissage automatique</span><span class="en">Machine learning</span></h3><p><span class="fr">Apprentissage supervisé et non supervisé, validation, apprentissage profond, MLOps</span><span class="en">Supervised and unsupervised learning, validation, deep learning, MLOps</span></p><span class=tag>Informatique</span><span class=tag>Bishop's CS</span></div><div class="card"><h3><span class="fr">Télédétection et géomatique</span><span class="en">Remote sensing and GIS</span></h3><p><span class="fr">Images satellites, Google Earth Engine, classification de l'occupation du sol, SIG avec Python</span><span class="en">Satellite imagery, Google Earth Engine, land-cover classification, GIS with Python</span></p><span class=tag>Géomatique appliquée</span><span class=tag>Bishop's Geography</span></div><div class="card"><h3><span class="fr">Recherche opérationnelle et méthodes quantitatives</span><span class="en">Operations research and quantitative methods</span></h3><p><span class="fr">Programmation linéaire, optimisation, gestion des stocks, aide à la décision</span><span class="en">Linear programming, optimization, inventory control, decision support</span></p><span class=tag>SIMQG</span><span class=tag>Mathématiques</span></div><div class="card"><h3><span class="fr">Analytique d'affaires</span><span class="en">Business analytics</span></h3><p><span class="fr">Intelligence d'affaires, tableaux de bord Power BI et Tableau, analytique prédictive</span><span class="en">Business intelligence, Power BI and Tableau dashboards, predictive analytics</span></p><span class=tag>École de gestion</span><span class=tag>Williams School</span></div></div>
+</div></section>
+
+<section class="soft"><div class="wrap two">
+  <div><div class="section-head"><div class="eyebrow"><span class="fr">Recherche</span><span class="en">Research</span></div><h2><span class="fr">Des données au service des décisions</span><span class="en">Data for better decisions</span></h2>
+  <p><span class="fr">Mes travaux appliquent la statistique et l'apprentissage automatique à la sécurité alimentaire, à l'eau, aux espèces envahissantes et à la santé (diabète de type 2). Ils nourrissent directement les études de cas de mes cours.</span><span class="en">My work applies statistics and machine learning to food security, water, invasive species and health (type 2 diabetes). It feeds directly into the case studies of my courses.</span></p>
+  <a class="btn outline" href="publications.html"><span class="fr">Publications</span><span class="en">Publications</span></a></div></div>
+  <div class="cards">
+    <a class="card" href="publications.html" style="color:inherit"><div class="meta">Heliyon · 2022</div><h3><span class="fr">Sécheresse, confinements et agriculture au KwaZulu-Natal</span><span class="en">Drought, lockdowns and farming in KwaZulu-Natal</span></h3></a>
+    <a class="card" href="publications.html" style="color:inherit"><div class="meta">J. Racial Ethn. Health Disparities · 2024</div><h3><span class="fr">Prédicteurs du diabète de type 2 précoce</span><span class="en">Predictors of early-onset type 2 diabetes</span></h3></a>
+  </div>
+</div></section>
+
+<section><div class="wrap"><div class="cta">
+  <div><h2><span class="fr">Un cours à pourvoir ?</span><span class="en">A course to staff?</span></h2><p><span class="fr">Je réponds en 48 h. CV, plan de cours et références disponibles sur demande.</span><span class="en">I reply within 48 hours. CV, course outline and references available on request.</span></p></div>
+  <div class="btns"><a class="btn primary" href="mailto:noecaremee@gmail.com"><span class="fr">Me contacter</span><span class="en">Contact me</span></a><a class="btn ghost" href="resume.html">CV</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap">
+  <div>© 2026 Noé Carème Fouotsa Manfouo · Sherbrooke (Québec)</div>
+  <div class="icons"><a href="mailto:noecaremee@gmail.com">noecaremee@gmail.com</a><a href="https://www.linkedin.com/in/noefouotsa/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/noe2019" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=acKVfowAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://noe2019.github.io/DA-Portfolio-Website/" target="_blank" rel="noopener">Portfolio</a></div>
+</div></footer>
 </body>
 </html>
