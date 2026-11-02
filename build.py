@@ -20,7 +20,8 @@ def B(fr, en, tag="div"):
 
 
 NAV = [("index.html", "Accueil", "Home"), ("teaching.html", "Enseignement", "Teaching"),
-       ("cours-ml4eo.html", "Cours ML4EO", "ML4EO course"), ("publications.html", "Recherche", "Research"),
+       ("cours-ml4eo.html", "Cours ML4EO", "ML4EO course"), ("cours-fraude360.html", "Cours Fraude", "Fraud course"),
+       ("publications.html", "Recherche", "Research"),
        ("portfolio.html", "Projets", "Projects"), ("resume.html", "CV", "CV"), ("contact.html", "Contact", "Contact")]
 
 
@@ -163,7 +164,7 @@ def build_index():
   <div class="stats">
     <div class="stat"><b>2015</b><span>{T("première charge de cours universitaire", "first university course taught")}</span></div>
     <div class="stat"><b>3</b><span>{T("pays : Cameroun, Afrique du Sud, Canada", "countries: Cameroon, South Africa, Canada")}</span></div>
-    <div class="stat"><b>14</b><span>{T("notebooks de cours ouverts et testés", "open, tested course notebooks")}</span></div>
+    <div class="stat"><b>28</b><span>{T("notebooks de cours ouverts et testés (2 cours)", "open, tested course notebooks (2 courses)")}</span></div>
     <div class="stat"><b>16</b><span>{T("applications de ML déployées", "deployed ML applications")}</span></div>
   </div>
 </div></section>
@@ -193,6 +194,29 @@ def build_index():
 </div></section>
 
 <section><div class="wrap">
+  <div class="section-head"><div class="eyebrow">{T("Deuxième cours prêt à offrir", "Second ready-to-offer course")}</div>
+  <h2>{T("Science des données appliquée : détection de la fraude", "Applied Data Science: Fraud Detection")}</h2>
+  <p>{T("Du pipeline à la production, sur un prototype industriel ouvert (PySpark, MLflow, FastAPI, Power BI). Trois parcours avec séances associées : gestion (SIMQG, Williams School), informatique, cégep/formation continue.",
+        "From pipeline to production on an open industrial prototype (PySpark, MLflow, FastAPI, Power BI). Three tracks with mapped sessions: business (SIMQG, Williams School), computer science, college/continuing education.")}</p></div>
+  <div class="feature">
+    <div>
+      <ul class="list-check">
+        <li>{T("Seuil de décision choisi en dollars, sous contrainte de capacité d'enquête", "Decision threshold chosen in dollars, under investigation capacity")}</li>
+        <li>{T("Test A/B, API de scoring, surveillance de la dérive et réentraînement conditionnel", "A/B testing, scoring API, drift monitoring and conditional retraining")}</li>
+        <li>{T("Gouvernance (BSIF E-23), équité, risque de crédit IFRS 9 et IA générative encadrée", "Governance (OSFI E-23), fairness, IFRS 9 credit risk and governed generative AI")}</li>
+      </ul>
+      <div class="btns" style="margin-top:18px"><a class="btn outline" href="cours-fraude360.html">{T("Voir les séances par cursus", "See sessions by program")}</a><a class="btn outline" href="{REPO_F}" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+    <div class="blocks">
+      <div class="block b1"><b>S1–S5</b><span>{T("Données : Bronze, Silver, Gold", "Data: Bronze, Silver, Gold")}</span></div>
+      <div class="block b2"><b>S6–S8</b><span>{T("Modèles, seuil, registre", "Models, threshold, registry")}</span></div>
+      <div class="block b3"><b>S9–S12</b><span>{T("Production et surveillance", "Production and monitoring")}</span></div>
+      <div class="block b4"><b>S13–S15</b><span>{T("Gouvernance, BI, projets", "Governance, BI, projects")}</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="soft"><div class="wrap">
   <div class="section-head"><div class="eyebrow">{T("Domaines d'enseignement", "Teaching areas")}</div>
   <h2>{T("Cours que je peux donner", "Courses I can teach")}</h2>
   <p>{T("En français ou en anglais, au cégep, au 1er cycle ou aux cycles supérieurs. Les étiquettes indiquent les unités où ces cours sont habituellement offerts.",
@@ -200,7 +224,7 @@ def build_index():
   <div class="cards">{cards}</div>
 </div></section>
 
-<section class="soft"><div class="wrap two">
+<section><div class="wrap two">
   <div><div class="section-head"><div class="eyebrow">{T("Recherche", "Research")}</div><h2>{T("Des données au service des décisions", "Data for better decisions")}</h2>
   <p>{T("Mes travaux appliquent la statistique et l'apprentissage automatique à la sécurité alimentaire, à l'eau, aux espèces envahissantes et à la santé (diabète de type 2). Ils nourrissent directement les études de cas de mes cours.",
         "My work applies statistics and machine learning to food security, water, invasive species and health (type 2 diabetes). It feeds directly into the case studies of my courses.")}</p>
@@ -230,7 +254,7 @@ def build_teaching():
          ["Lectures in statistics and forecasting techniques for third-year Operations Research undergraduates",
           "Data science lectures for postgraduate students",
           "Designed course outlines, assignments and exams; supervised and advised students"]),
-        ("2022", "Atelier intensif ML4EO (5 jours)", "ML4EO intensive workshop (5 days)",
+        ("2022", "Atelier intensif ML4EO (5 jours) — Département d'économie, Université de Stellenbosch", "ML4EO intensive workshop (5 days) — Department of Economics, Stellenbosch University",
          "Concepteur et formateur", "Designer and instructor",
          ["Python et apprentissage automatique pour l'observation de la Terre : Earth Engine, GeoPandas, classification",
           "Matériel ouvert, devenu le cours de 45 h présenté sur ce site"],
@@ -282,6 +306,9 @@ def build_teaching():
     <div class="card"><span class="tag green">{T("45 h · 3 crédits", "45 h · 3 credits")}</span><h3>{T("Apprentissage automatique pour l'observation de la Terre", "Machine Learning for Earth Observation")}</h3>
       <p>{T("Plan de cours bilingue, 14 notebooks Colab avec rétroaction automatique, examen pratique, projet et grille.", "Bilingual outline, 14 Colab notebooks with automatic feedback, practical exam, project and rubric.")}</p>
       <a href="cours-ml4eo.html">{T("Voir le cours →", "See the course →")}</a></div>
+    <div class="card"><span class="tag green">{T("45 h · 3 parcours", "45 h · 3 tracks")}</span><h3>{T("Science des données appliquée : détection de la fraude", "Applied Data Science: Fraud Detection")}</h3>
+      <p>{T("Plan de cours avec séances par cursus (gestion, informatique, cégep), 14 notebooks Colab testés, projet devant un « comité de risque ».", "Outline with sessions per program (business, CS, college), 14 tested Colab notebooks, project before a “risk committee”.")}</p>
+      <a href="cours-fraude360.html">{T("Voir le cours →", "See the course →")}</a></div>
     <div class="card"><span class="tag">{T("Exemples", "Examples")}</span><h3>{T("16 applications de démonstration", "16 demonstration apps")}</h3>
       <p>{T("Applications web déployées utilisées en classe pour illustrer la mise en production de modèles.", "Deployed web apps used in class to show how models reach production.")}</p>
       <a href="portfolio.html">{T("Voir les projets →", "See the projects →")}</a></div>
@@ -364,6 +391,125 @@ def build_course():
 </div></div></section>"""
     page("cours-ml4eo.html", "Cours ML4EO · Course",
          "Cours de 45 h « Apprentissage automatique pour l'observation de la Terre » : plan, 15 séances, laboratoires Colab, évaluation. 45-hour Machine Learning for Earth Observation course.", body)
+
+
+REPO_F = "https://github.com/noe2019/fraude-360"
+COLAB_F = "https://colab.research.google.com/github/noe2019/fraude-360/blob/main/cours/laboratoires/"
+# (séance, notebook, thème FR, thème EN, Gestion, Informatique, Cégep/FC) — ● complète · ○ démonstration · — hors parcours
+SESSIONS_F = [
+    (1, "contexte_simulation", "La fraude transactionnelle et ses coûts ; données simulées", "Transaction fraud and its costs; simulated data", "●", "●", "●"),
+    (2, "ingestion_bronze", "Ingestion incrémentale (Bronze), PySpark", "Incremental ingestion (Bronze), PySpark", "○", "●", "—"),
+    (3, "qualite_silver", "Qualité des données et quarantaine (Silver)", "Data quality and quarantine (Silver)", "●", "●", "●"),
+    (4, "variables_gold", "Variables comportementales sans fuite temporelle (Gold)", "Behavioural features without leakage (Gold)", "○", "●", "○"),
+    (5, "exploration", "Analyse exploratoire orientée décision", "Decision-oriented exploratory analysis", "●", "●", "●"),
+    (6, "modelisation_calibration", "Découpage temporel, déséquilibre, calibration", "Temporal split, imbalance, calibration", "●", "●", "●"),
+    (7, "seuil_economique", "Seuil choisi en dollars, capacité d'enquête", "Dollar-based threshold, investigation capacity", "●", "●", "●"),
+    (8, "mlflow_registre", "Registre MLflow, champion/challenger · examen", "MLflow registry, champion/challenger · exam", "●", "●", "—"),
+    (9, "test_ab", "Test A/B : randomisation par carte, bootstrap", "A/B testing: card-level randomisation, bootstrap", "●", "●", "○"),
+    (10, "deploiement_api", "Déploiement : API de scoring en temps réel", "Deployment: real-time scoring API", "○", "●", "●"),
+    (11, "surveillance_derive", "Surveillance : PSI, KS, dérive de performance", "Monitoring: PSI, KS, performance drift", "●", "●", "○"),
+    (12, "nouvelle_fraude_reentrainement", "Nouvelle typologie et réentraînement conditionnel", "New fraud pattern and conditional retraining", "○", "●", "—"),
+    (13, "gouvernance_credit", "Gouvernance, équité et risque de crédit (IFRS 9)", "Governance, fairness and credit risk (IFRS 9)", "●", "○", "—"),
+    (14, "bi_ia_generative", "Power BI et triage des alertes par IA générative", "Power BI and generative-AI alert triage", "●", "●", "●"),
+]
+TRACKS_F = [
+    ("Gestion", "Business",
+     "UdeS École de gestion (SIMQG) : microprogramme en intelligence d'affaires et analytique, maîtrise/DESS ; Bishop's Williams School of Business",
+     "UdeS School of Management (SIMQG): business intelligence and analytics programs; Bishop's Williams School of Business",
+     "45 h", "Coûts, expérimentation, gouvernance, tableau de bord ; code PySpark fourni et commenté",
+     "Costs, experimentation, governance, dashboard; PySpark code provided and explained"),
+    ("Informatique", "Computer science",
+     "UdeS Département d'informatique : maîtrise (cheminement IA et science des données), baccalauréat",
+     "UdeS Computer Science: master's (AI and data science stream), bachelor's",
+     "45 h", "PySpark, MLflow, API, surveillance ; projet déployable sur Azure Databricks",
+     "PySpark, MLflow, API, monitoring; project deployable on Azure Databricks"),
+    ("Cégep / FC", "College / CE",
+     "Cégep de Sherbrooke (formation continue, AEC), Techniques de l'informatique ; UdeS formation continue",
+     "Cégep de Sherbrooke (continuing education, AEC), Computer Techniques; UdeS continuing education",
+     "30 h (→ 45 h)", "Version pandas, API prête à l'emploi, projet guidé",
+     "pandas version, ready-made API, guided project"),
+]
+
+
+def build_course_fraude():
+    def cell(v):
+        cls = {"●": "dot full", "○": "dot demo", "—": "dot off"}[v]
+        return f'<td class="trk"><span class="{cls}" title="{v}">{v}</span></td>'
+    rows = "".join(f'<tr><td class="n">{n}</td><td>{T(fr, en)}</td><td><a class="colab" href="{COLAB_F}{n:02d}_{slug}.ipynb" target="_blank" rel="noopener">Colab ↗</a></td>{cell(g)}{cell(i)}{cell(c)}</tr>'
+                   for n, slug, fr, en, g, i, c in SESSIONS_F)
+    rows += f'<tr><td class="n">15</td><td>{T("Présentations des projets devant un « comité de risque »", "Project presentations to a “risk committee”")}</td><td>—</td>{cell("●")}{cell("●")}{cell("●")}</tr>'
+
+    def seances(idx, sym):
+        nums = [s[0] for s in SESSIONS_F if s[idx] == sym] + ([15] if sym == "●" else [])
+        out, start = [], None
+        for k, x in enumerate(nums):
+            if start is None:
+                start = x
+            if k == len(nums) - 1 or nums[k + 1] != x + 1:
+                out.append(f"S{start}" if start == x else f"S{start}–S{x}")
+                start = None
+        return ", ".join(out) or "—"
+    tracks = "".join(f"""<div class="card"><span class="tag green">{dur}</span><h3>{T(fr, en)}</h3><p class="meta">{T(pfr, pen)}</p>
+<p><b>{T("Séances complètes", "Full sessions")} :</b> {seances(4 + k, "●")}<br><b>{T("Démonstrations", "Demonstrations")} :</b> {seances(4 + k, "○")}</p>
+<p>{T(nfr, nen)}</p></div>""" for k, (fr, en, pfr, pen, dur, nfr, nen) in enumerate(TRACKS_F))
+    outcomes = [("Construire un pipeline de données en couches avec contrôles de qualité et quarantaine traçable.", "Build a layered data pipeline with quality checks and traceable quarantine."),
+                ("Créer des variables comportementales en fenêtres glissantes, sans fuite d'information du futur.", "Engineer rolling-window behavioural features without leakage from the future."),
+                ("Entraîner, calibrer et comparer des modèles sur données très déséquilibrées (découpage temporel).", "Train, calibrate and compare models on highly imbalanced data (temporal split)."),
+                ("Choisir un seuil qui minimise le coût en dollars sous contrainte de capacité d'enquête.", "Choose a threshold that minimises dollar cost under investigation capacity."),
+                ("Planifier et analyser un test A/B valide (randomisation par grappe, A/A, bootstrap).", "Design and analyse a valid A/B test (cluster randomisation, A/A, bootstrap)."),
+                ("Déployer un modèle (API temps réel, lots) avec MLflow et un moteur de règles hybride.", "Deploy a model (real-time API, batch) with MLflow and a hybrid rules engine."),
+                ("Surveiller la dérive (PSI, KS, performance) et décider d'un réentraînement.", "Monitor drift (PSI, KS, performance) and decide on retraining."),
+                ("Documenter et gouverner un modèle (fiche, équité, IA générative encadrée) et communiquer dans Power BI.", "Document and govern a model (model card, fairness, governed GenAI) and report in Power BI.")]
+    assess = [("Carnets de laboratoire (4 remises)", "Lab notebooks (4 submissions)", "20 %"), ("Quiz en ligne (3)", "Online quizzes (3)", "15 %"),
+              ("Examen pratique de mi-session", "Midterm practical exam", "20 %"),
+              ("Projet d'équipe : proposition, rapport d'étape, présentation, rapport final + GitHub + fiche de modèle",
+               "Team project: proposal, progress report, presentation, final report + GitHub + model card", "45 %")]
+    body = f"""
+<section class="page-hero"><div class="wrap">
+  <h1>{T("Science des données appliquée : détection de la fraude", "Applied Data Science: Fraud Detection")}</h1>
+  <p>{T("Du pipeline à la production · cours de 3 crédits (45 h) · trois parcours : gestion, informatique, cégep/formation continue · français (laboratoires) et anglais (plan).",
+        "From pipeline to production · 3-credit course (45 h) · three tracks: business, computer science, college/continuing education · French labs, bilingual outline.")}</p>
+  <div class="btns" style="margin-top:22px"><a class="btn primary" href="{REPO_F}" target="_blank" rel="noopener">{T("Dépôt GitHub du cours", "Course GitHub repository")}</a>
+  <a class="btn ghost" href="{COLAB_F}01_contexte_simulation.ipynb" target="_blank" rel="noopener">{T("Essayer la séance 1 dans Colab", "Try session 1 in Colab")}</a></div>
+</div></section>
+
+<section><div class="wrap two">
+  <div><div class="section-head"><div class="eyebrow">{T("Description", "Description")}</div><h2>{T("Tout le cycle de vie d'un modèle, pas seulement l'entraînement", "The whole model life cycle, not just training")}</h2></div>
+  {B("<p>En entreprise, entraîner le modèle représente à peine 20 % du travail. Ce cours fait construire, séance après séance, le système de détection de la fraude d'une coopérative financière fictive : ingestion, qualité, variables, modèle calibré, seuil choisi en dollars, registre, test A/B, API, surveillance, réentraînement, gouvernance, Power BI et triage des alertes par IA générative.</p><p>Le fil conducteur est <b>Fraude-360</b>, un prototype ouvert construit par le chargé de cours (PySpark, MLflow, FastAPI, Power BI ; données 100 % synthétiques). Chaque laboratoire exécute une étape, puis fait réécrire sa fonction clé et la compare à l'implémentation de référence.</p>",
+     "<p>In industry, training the model is barely 20% of the work. Session by session, students build the fraud-detection system of a fictional credit union: ingestion, data quality, features, calibrated model, dollar-based threshold, registry, A/B test, API, monitoring, retraining, governance, Power BI and generative-AI alert triage.</p><p>The common thread is <b>Fraude-360</b>, an open prototype built by the instructor (PySpark, MLflow, FastAPI, Power BI; 100% synthetic data). Each lab runs one pipeline step, then has students rewrite its key function and compare it with the reference implementation.</p>")}
+  <p><span class="tag">PySpark</span><span class="tag">scikit-learn</span><span class="tag">MLflow</span><span class="tag">FastAPI</span><span class="tag">Power BI</span><span class="tag">SAS</span><span class="tag">{T("IA générative (RAG)", "Generative AI (RAG)")}</span><span class="tag">Azure Databricks</span></p></div>
+  <div class="card"><h3>{T("Objectifs d'apprentissage", "Learning outcomes")}</h3>
+    <ol class="fr">{"".join(f"<li>{fr}</li>" for fr, _ in outcomes)}</ol><ol class="en">{"".join(f"<li>{en}</li>" for _, en in outcomes)}</ol></div>
+</div></section>
+
+<section class="soft"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">{T("Parcours de formation", "Training tracks")}</div><h2>{T("Un cours, trois cursus", "One course, three programs")}</h2>
+  <p>{T("Les séances associées à chaque cursus sont indiquées ci-dessous et dans le calendrier. Dans chaque notebook, les exercices sont aussi étiquetés : 🟢 tous · 🟣 gestion + informatique · 🔷 informatique · 🔶 gestion.",
+        "The sessions associated with each program are listed below and in the schedule. Inside every notebook, exercises are also tagged: 🟢 all · 🟣 business + CS · 🔷 CS · 🔶 business.")}</p></div>
+  <div class="cards">{tracks}</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="section-head"><div class="eyebrow">{T("Calendrier", "Schedule")}</div><h2>{T("15 séances de 3 h et séances par cursus", "15 three-hour sessions, by program")}</h2>
+  <p>{T("● séance complète · ○ démonstration en classe (laboratoire facultatif) · — hors parcours. Chaque laboratoire s'ouvre dans Google Colab en un clic, sans installation.",
+        "● full session · ○ in-class demonstration (optional lab) · — not in track. Each lab opens in Google Colab in one click, nothing to install.")}</p></div>
+  <div class="table-wrap"><table><thead><tr><th>#</th><th>{T("Séance", "Session")}</th><th>{T("Laboratoire", "Lab")}</th><th>{T("Gestion", "Business")}</th><th>{T("Informatique", "CS")}</th><th>{T("Cégep / FC", "College / CE")}</th></tr></thead><tbody>{rows}</tbody></table></div>
+</div></section>
+
+<section class="soft"><div class="wrap two">
+  <div><div class="section-head"><div class="eyebrow">{T("Évaluation", "Assessment")}</div><h2>{T("Des décisions défendues devant un comité", "Decisions defended before a committee")}</h2>
+  <p>{T("Le projet d'équipe adapte le pipeline à un nouveau contexte (autre institution, autre fraude) et se termine par une présentation à un « comité de risque ». La grille porte sur le problème d'affaires, les données, le seuil, la production et la gouvernance.",
+        "The team project adapts the pipeline to a new context (another institution, another fraud) and ends with a presentation to a “risk committee”. The rubric covers the business problem, data, threshold, production and governance.")}</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th>{T("Élément", "Component")}</th><th>{T("Poids", "Weight")}</th></tr></thead><tbody>
+  {"".join(f"<tr><td>{T(fr, en)}</td><td><b>{w}</b></td></tr>" for fr, en, w in assess)}</tbody></table></div>
+</div></section>
+
+<section><div class="wrap"><div class="cta">
+  <div><h2>{T("Plan de cours complet", "Full course outline")}</h2><p>{T("Version détaillée (calendrier par cursus, grille, politiques, bibliographie) envoyée sur demande.", "Detailed version (schedule by program, rubric, policies, readings) sent on request.")}</p></div>
+  <div class="btns"><a class="btn primary" href="mailto:{EMAIL}?subject=Plan%20de%20cours%20Fraude-360">{T("Demander le plan de cours", "Request the outline")}</a></div>
+</div></div></section>"""
+    page("cours-fraude360.html", "Cours Fraude-360 · Course",
+         "Cours de 45 h « Science des données appliquée : détection de la fraude » : séances par cursus (gestion, informatique, cégep), laboratoires Colab. 45-hour applied fraud-detection data science course.", body)
 
 
 def build_publications():
@@ -463,7 +609,7 @@ def redirects():
         (OUT / old).write_text(f'<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={new}">'
                                f'<link rel="canonical" href="{SITE}/{new}"><title>Redirection</title></head>'
                                f'<body><a href="{new}">{new}</a></body></html>\n', encoding="utf-8")
-    pages = ["index.html", "teaching.html", "cours-ml4eo.html", "publications.html", "portfolio.html", "resume.html", "contact.html"]
+    pages = ["index.html", "teaching.html", "cours-ml4eo.html", "cours-fraude360.html", "publications.html", "portfolio.html", "resume.html", "contact.html"]
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                      + "".join(f"  <url><loc>{SITE}/{p}</loc></url>\n" for p in pages) + "</urlset>\n")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
@@ -475,5 +621,5 @@ def redirects():
 
 
 if __name__ == "__main__":
-    build_index(); build_teaching(); build_course(); build_publications(); build_portfolio(); build_resume(); build_contact(); redirects()
+    build_index(); build_teaching(); build_course(); build_course_fraude(); build_publications(); build_portfolio(); build_resume(); build_contact(); redirects()
     print("built")

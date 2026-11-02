@@ -27,13 +27,13 @@ html[data-lang="fr"] .en, html[data-lang="en"] .fr { display: none !important; }
 .logo { font-weight: 800; color: var(--ink); white-space: nowrap; }
 .logo small { display: block; font-weight: 500; color: var(--muted); font-size: .72rem; margin-top: -3px; }
 .nav { display: flex; gap: 4px; margin-left: auto; align-items: center; }
-.nav a { color: var(--text); padding: 8px 12px; border-radius: 8px; font-size: .95rem; font-weight: 500; }
+.nav a { color: var(--text); padding: 8px 10px; white-space: nowrap; border-radius: 8px; font-size: .95rem; font-weight: 500; }
 .nav a:hover { background: var(--soft); text-decoration: none; }
 .nav a.active { color: var(--brand); background: #eaf3f9; }
 .lang { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 6px 12px; font: 600 .82rem "Inter", sans-serif;
   color: var(--ink); cursor: pointer; margin-left: 6px; }
 .burger { display: none; margin-left: auto; background: none; border: 0; font-size: 1.6rem; color: var(--ink); cursor: pointer; }
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .burger { display: block; }
   .nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch;
     padding: 10px 20px 16px; border-bottom: 1px solid var(--line); }
@@ -129,3 +129,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 footer a { color: #e3e9f2; }
 .icons a { margin-right: 14px; }
 @media print { .top, .lang, footer, .btns { display: none; } }
+
+/* course tracks */
+td.trk, th.trk { text-align: center; width: 1%; }
+.dot { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: .9rem; font-weight: 700; }
+.dot.full { background: #e7f6f2; color: #0a7a68; }
+.dot.demo { background: #fff4e3; color: #b26a00; }
+.dot.off { color: #a3abb8; }
